@@ -75,20 +75,6 @@ services:
       - 8088:8088
     depends_on: *superset-depends-on
     volumes: *superset-volumes
-    environment:
-         SECRET_KEY = ''
-         TALISMAN_ENABLED = False
-         FEATURE_FLAGS = {
-    "ALERT_REPORTS": True,
-    "DRILL_BY": True,
-    "DRILL_TO_DETAIL": True,
-    "HORIZONTAL_FILTER_BAR": True,
-    "DASHBOARD_CROSS_FILTERS": True,
-    "ENABLE_TEMPLATE_PROCESSING": True,
-    "TAGGING_SYSTEM": True,
-    "HORIZONTAL_FILTER_BAR": True,
-    "ENABLE_EXPLORE_DRAG_AND_DROP": True,
-} 	
 
   superset-init:
     container_name: superset_init_dev
